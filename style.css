@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem ;
+    flex-wrap: wrap;
+    position: fixed;
+    height:fit-content;
+    z-index: 1;
+    width: 90vw;
+}
+.nav-bar img{
+    width: 50px;
+    height: 50px;
+}
+
+.nav-tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none; 
+    margin: 10px 20px;
+
+
+}
+nav i{
+    display: none;
+}
+.nav-tab li{
+    padding-right: 2rem;
+}
+.nav-tab li a{
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+}
+
+.nav-tab li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.fa-bars, .fa-times {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+section {
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.header-text {
+    text-align: center;
+    padding-top: 250px;
+}
+
+
+.header-text h1 {
+    font-size: 3rem;
+    padding-bottom: 25px;
+}
+
+.header-text p{
+    font-size:1.2rem;
+    margin: 1rem 0;
+}
+.header-text span{
+    font-size: 1.5rem;
+    color: #0400e6;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #ff004f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e6003e;
+}
+
+#about{
+    text-align: center;
+}
+.about-us{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 50px;
+    padding: 20px;
+}
+.leftbox{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
+.rightbox{
+    border-radius: 10px;
+    background-color: #ff004f;
+    flex-basis: 35%;
+    padding: 25px 30px;
+    text-align: center;
+    margin-right: 40px;
+    font-size: 14px;
+    line-height: 0fr;
+}
+.heading{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom:20px;
+
+}
+
+/* ****************************Gallery *************** */
+.rotate-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.image-container{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(45deg);
+    transition: transform 0.7s;
+}
+.image-container span{
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    position: absolute;
+}
+
+.image-container span img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.btn-container{
+    position: relative;
+    width: 80%;
+}
+.btn{
+    position: absolute;
+    bottom: -80px;
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn :hover{
+    filter: brightness(1.5);
+}
+#prev{
+    left: 30%;
+}
+
+
+/* -----------------------------Contact------------------ */
+
+#Contact{
+    padding: 50px 0;
+    color: #fff;
+}
+.contact-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+}
+.leftside{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+
+
+}
+.rightside{
+    flex-basis: 35%;
+
+}
+.mail-me,.call-me,.social-media{
+    display: flex;
+    gap: 12px;
+    margin-top:20px ;
+
+}
+.mail a{
+    color: #fff;
+}
+.call a{
+    color:#fff;
+}
+
+button{
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    width:fit-content;
+    padding: 15px 50px;
+    margin: 50px auto;
+    background: #ff004f;
+    color: #fff;
+}
+button a{
+    color: #fff;
+}
+.mail-icon,.call-icon{
+    color: #ff004f;
+    font-size: 27px;
+}
+.social-media{
+    font-size: 30px;
+    transition:transform 1s ;
+}
+.social-media a{
+    color: #fff;
+}
+#social :hover{
+    transform: translateY(-5px);
+    color: #ff004f;
+}
+
+
+.rightside,#form-input{
+    padding:10px;
+    background-color: #262626;
+    border-radius: 6px;
+    width: 550px;
+    color: #fff;
+    outline: none;
+    border: 0;
+    font-size: 18px;
+}
+form .btn2{
+    cursor:pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    background:#262626 ;
+    font-weight: 300;
+    position: static;
+}
+.copyright span{
+    font-weight:bold ;
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block
+}
+nav .fas{
+    display: none;
+}
+
+/* *******Media Query *********** */
+@media (max-width: 768px) {
+    .nav-tab {
+        flex-direction: column;
+        display: none;
+        background: #262626;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    nav .fas{
+        display: block;
+    }
+    .nav-tab.active {
+        display: flex;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    .fa-times {
+        display: none;
+    }
+
+    .fa-times.active {
+        display: block;
+    }
+
+    .fa-bars.active {
+        display: none;
+    }
+
+    .image-container{
+        width: 140px;
+        height: 140px;
+        }
+    .about-us{
+        flex-direction: column;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .contact-list{
+        flex-direction: column;
+    } 
+    .leftside,.rightside{
+        flex-basis: 100%;
+    }
+    #form-input{
+        margin-left: -10px;
+        width: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+        height: 10px;
+        text-align:baseline;
+    }
+}
